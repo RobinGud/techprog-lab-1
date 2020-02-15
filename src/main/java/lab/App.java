@@ -30,5 +30,42 @@ public class App {
         System.out.println("v_float: " + v_float);
         System.out.println("v_double: " + v_double);
         System.out.println("v_boolean: " + v_boolean);
+
+        // Task 3
+        
+        for (char i = 'a'; i <= 'z'; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println("");
+
+        long begini = new java.util.Date().getTime();
+        int i = 0;
+        for (i = 1; i < 10_000_000; i++) {
+        }
+        long endi = new java.util.Date().getTime();
+        System.out.println("int i, time: " + (endi - begini));
+
+        long beginl = new java.util.Date().getTime();
+        long l = 0;
+        for (l = 1; l < 10_000_000; l++) {
+        }
+        long endl= new java.util.Date().getTime();
+        System.out.println("long l, time: " + (endl - beginl));
+
+        // Task 4 (5 - 1) 0_O
+
+        int[] mas = { 321, 12, 21, -312, 54, 34, 2, 43 };
+
+        int max = Integer.MIN_VALUE;
+
+        for (int value : mas) {
+            if (value > max) {
+                max = value;
+            }
+        }
+
+        System.out.println("Max: " + max);
+        
+        // Task 5 (5 - 2) 0_O
     }
 }

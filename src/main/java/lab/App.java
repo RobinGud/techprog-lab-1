@@ -10,9 +10,16 @@ package lab;
 */
 public class App {
     public static void main(String[] args){
+
+        final int MATRIX_HEIGHT = 3;
+        final int MATRIX_WIDTH = 3;
+
         // Task 1
+
         System.out.println("Starting project");
+
         // Task 2
+
         byte v_byte = 120;
         short v_short = 129;
         char v_char = 'a'; // add ''
@@ -32,7 +39,7 @@ public class App {
         System.out.println("v_boolean: " + v_boolean);
 
         // Task 3
-        
+
         for (char i = 'a'; i <= 'z'; i++) {
             System.out.print(i + " ");
         }
@@ -67,5 +74,29 @@ public class App {
         System.out.println("Max: " + max);
         
         // Task 5 (5 - 2) 0_O
+
+        int[][] matrix = new int[MATRIX_HEIGHT][MATRIX_WIDTH];
+
+        System.out.println("Initial Matrix");
+
+        for (int col = 0; col < MATRIX_HEIGHT; col++) {
+            for (int row = 0; row < MATRIX_WIDTH; row++) {
+                matrix[col][row] = (int) Math.round(Math.random() * 10);
+                System.out.print(matrix[col][row] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("Transparated Matrix");
+
+        int[][] transpMatrix = new int[MATRIX_HEIGHT][MATRIX_WIDTH];
+
+        for (int col = 0; col < MATRIX_HEIGHT; col++) {
+            for (int row = 0; row < MATRIX_WIDTH; row++) {
+                transpMatrix[row][col] = matrix[col][row];
+                System.out.print(matrix[col][row] + " ");
+            }
+            System.out.println();
+        }
     }
 }
